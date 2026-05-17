@@ -96,5 +96,9 @@ function onGalleryItemClick(event) {
 
   const largeImageURL = event.target.dataset.source;
 
-  console.log(largeImageURL);
+  const instance = basicLightbox.create(`
+    <img src="${largeImageURL}" width="1112" height="640">
+  `);
+
+  instance.show();
 }
