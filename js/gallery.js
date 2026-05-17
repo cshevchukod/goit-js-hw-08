@@ -90,6 +90,10 @@ gallery.addEventListener('click', onGalleryItemClick);
 function onGalleryItemClick(event) {
   event.preventDefault();
 
+  if (!event.target.classList.contains('gallery-image')) {
+    return;
+  }
+
   const largeImageURL = event.target.dataset.source;
 
   console.log(largeImageURL);
