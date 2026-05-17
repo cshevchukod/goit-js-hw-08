@@ -84,3 +84,13 @@ const galleryMarkup = images
   .join('');
 
 gallery.insertAdjacentHTML('beforeend', galleryMarkup);
+
+gallery.addEventListener('click', onGalleryItemClick);
+
+function onGalleryItemClick(event) {
+  event.preventDefault();
+
+  const largeImageURL = event.target.dataset.source;
+
+  console.log(largeImageURL);
+}
